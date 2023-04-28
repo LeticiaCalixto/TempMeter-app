@@ -55,13 +55,14 @@ export default function Login() {
         ) : (
           <div>
             <div className="table" style={{ marginTop: 170, marginLeft: "12%", height: 500, width: "75%" }}>
-              <div>
-                <div className="table-title">{sensor}</div>
-                <button type="button" style={{ marginTop: 5, marginRight: 15 }} className="close" onClick={() => handleSensor('')} aria-label="Fechar">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
+              <div className="table-title">{sensor}</div>
 
+
+              <div style={{ marginRight: 5, marginTop: 5}}>
+                  <button type="button" className="close" onClick={() => handleSensor('')} aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
             </div>
           </div>
         )
