@@ -17,6 +17,7 @@ import {
     Tooltip,
     Legend,
 } from 'chart.js';
+import { ChartLine } from "./components/chartLine";
 
 ChartJS.register(
     CategoryScale,
@@ -42,42 +43,6 @@ export default function Login() {
         console.log('openModal', openModal)
         handleModal(true)
     }
-
-    const options = {
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top' as const,
-                labels: {
-                    color: '#FFF'
-                }
-            },
-            title: {
-                display: true,
-                text: 'Chart.js Line Chart',
-            },
-        },
-    };
-
-    const labels = ['January', 'February', 'March', 'April', 'May'];
-
-    const data = {
-        labels,
-        datasets: [
-            {
-                label: 'Dataset 1',
-                data: ['1', '7', '9', '5', '2'],
-                borderColor: '#FFFF00',
-                backgroundColor: '#FFFF00',
-            },
-            {
-                label: 'Dataset 2',
-                data: ['7', '3', '4', '5', '4'],
-                borderColor: '#FF00FF',
-                backgroundColor: '#FF00FF',
-            },
-        ],
-    };
 
     return (
         <>
@@ -118,7 +83,7 @@ export default function Login() {
                                     <span aria-hidden="true">&times;</span>
 
                                     <div className="chartLine">
-                                        <Line options={options} data={data} />
+                                        <ChartLine/>
                                     </div>
 
                                 </button>
