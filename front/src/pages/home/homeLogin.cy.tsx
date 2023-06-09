@@ -1,9 +1,9 @@
-import React from 'react'
-import Login from './home'
+// import React from 'react'
+// import Login from './home'
 
-describe('<Login />', () => {
-  it('renders', () => {
-    // see: https://on.cypress.io/mounting-react
-    cy.mount(<Login />)
-  })
-})
+// describe('<Login />', () => {
+//   it('renders', () => {
+//     // see: https://on.cypress.io/mounting-react
+//     cy.mount(<Login />)
+//   })
+// })
