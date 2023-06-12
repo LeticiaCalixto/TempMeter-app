@@ -1,5 +1,7 @@
 # TempMeter-app
 
+## Back-End:
+
 Para rodar o back-end, primeiro entre na pasta correspondente usando: 
 
 `cd back`
@@ -12,6 +14,7 @@ Com as dependencias instaladas, agora é só rodar o código:
 
 `yarn dev`
 
+## Front-End:
 Para rodar o front-end, abra outro terminal e entre na pasta correspondente usando: 
 
 `cd front`
