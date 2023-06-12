@@ -44,6 +44,42 @@ export default function Login() {
         handleModal(true)
     }
 
+    const labels = ['00h', '01h', '02h', '03h', '04h', '05h']
+
+    var dataset = {
+        label: 'Sensor',
+        data: [0, 0, 0, 0, 0, 0],
+        borderColor: '#FFFFFF',
+        backgroundColor: '#FFFFFF',
+    }
+
+    switch (sensor) {
+        case 'Sensor 1':
+            dataset = {
+                label: 'Sensor 1',
+                data: [2, 4, 3, 6, 12, 7],
+                borderColor: '#FFFF00',
+                backgroundColor: '#FFFF00',
+            }
+            break;
+        case 'Sensor 2':
+            dataset = {
+                label: 'Sensor 2',
+                data: [15, 13, 9, 18, 13, 10],
+                borderColor: '#FF00FF',
+                backgroundColor: '#FF00FF',
+            }
+            break;
+        case 'Sensor 3':
+            dataset = {
+                label: 'Sensor 3',
+                data: [15, 11, 21, 25, 13, 20],
+                borderColor: '#00FFFF',
+                backgroundColor: '#00FFFF',
+            }
+            break;
+    }
+
     return (
         <>
             <div className="container-fluid" style={{ backgroundColor: "#392F5A" }}>
@@ -79,11 +115,11 @@ export default function Login() {
                         <div className="table" style={{ marginTop: 170, marginLeft: "12%", height: 500, width: "75%" }}>
                             <div>
                                 <div className="table-title">{sensor}</div>
-                                <button type="button" style={{ marginTop: 5, marginRight: 15 }} className="close" onClick={() => handleSensor('')} aria-label="Fechar">
+                                <button type="button" style={{ marginTop: 5, right: 15 }} className="close" onClick={() => handleSensor('')} aria-label="Fechar">
                                     <span aria-hidden="true">&times;</span>
 
                                     <div className="chartLine">
-                                        <ChartLine/>
+                                        <ChartLine labels={labels} datasets={[dataset]} />
                                     </div>
 
                                 </button>
